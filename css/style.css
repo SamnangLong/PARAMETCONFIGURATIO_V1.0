@@ -1,0 +1,878 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+body{
+    overflow: hidden;
+}
+
+/* CONTAIN */
+.containner{
+    width: 1919px;
+    height: 910px;
+    font-family: Arial;
+    background-color: #bbd2ee;
+    display: block;
+    margin: auto;
+    /* color: #bbd2ee; */
+    /* opacity: 70%; */
+    /* background-color: #da1c5c;  */  /*OFF
+    /* background-color: #39b54a; */ /*SUBMIT
+    /* background-color: #47cd90; */ /*ON 
+    /* background-color: #198f9b; */ /*TITLE*/
+}
+
+/* -TITLE- */
+.header{
+    width: 1920px;
+    height: 70px;
+    background-color: #0072bb;
+}
+.header img{
+    margin-top: -7px;
+    height: 90px;
+    width: auto;
+    float: left;
+    background-color: #bbd2ee;
+}
+.header #title_parameter{
+    padding-top: 10px;
+    margin-left: 700px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+/* -BODY- */
+.body{
+    height: 760px;
+    width: 1920px;
+    /* background-color: red; */
+    margin-top: 13px;
+    padding-left: 1.5px;
+    padding-right: 1.5px;
+}
+
+/* --MODBUS PARAMETER-- */
+.modbus_parameter{
+    display: flex;
+    position: relative;
+    height: 103px;
+    width: 1917px;
+    /* background-color: aqua; */
+}
+
+/* ---DEVICE INFO--- */
+.device_info{
+    height: 100px;
+    width: 953px;
+    float: left;
+    margin: auto;
+    margin-top: 0px;
+    margin-right: 1px;
+    margin-left: 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* background-color: wheat; */
+}
+.device_info h2{
+    width: 129px;
+    padding: 2px 405.5px 2px 405.5px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #198f9b;
+}
+.device_info #label_device_model{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-left: 110px;
+}
+.device_info #box_device_model{
+    width: 200px;
+    height: 20px;
+    margin-left: 5px;
+}
+.device_info #label_serial_number{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-left: 32px;
+}
+.device_info #box_serial_number{
+    width: 200px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+
+/* ---SERIAL SETTING--- */
+.serial_setting{
+    height: 100px;
+    width: 953px;
+    margin-left: 1px;
+    float: left;
+    margin: auto;
+    margin-top: 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* background-color: wheat; */
+}
+.serial_setting h2{
+    width: 154px;
+    padding: 2px 394px 2px 394px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #198f9b;
+}
+.serial_setting #baud{
+    float: left;
+    width: 120px;
+    height: 25px;
+    margin-left: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    /* font-weight: bold; */
+    color: black;
+}
+.serial_setting #data_bits{
+    float: left;
+    width: 120px;
+    height: 25px;
+    margin-left: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    /* font-weight: bold; */
+    color: black;
+}
+.serial_setting #parity{
+    float: left;
+    width: 120px;
+    height: 25px;
+    margin-left: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    /* font-weight: bold; */
+    color: black;
+}
+.serial_setting #Stop_bit{
+    float: left;
+    width: 120px;
+    height: 25px;
+    margin-left: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    /* font-weight: bold; */
+    color: black;
+}
+
+
+
+/*--MQTT-- */
+.mqtt{
+    height: 110px;
+    width: 1913px;
+    margin-top: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* background-color: aqua; */
+}
+.mqtt h2{
+    width: 70px;
+    padding: 2px 916.5px 2px 916.5px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: -5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #198f9b;
+}
+.mqtt #url{
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    margin-left: 140px;
+}
+.mqtt #box_url{
+    width: 550px;
+    height: 20px;
+}
+.mqtt #user_name{
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    margin-left: 100px;
+}
+.mqtt #box_name{
+    width: 300px;
+    height: 20px;
+}
+.mqtt #password{
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    margin-left: 100px;
+}
+.mqtt #box_password{
+    width: 300px;
+    height: 20px;
+}
+.mqtt #port{
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    margin-left: 100px;
+}
+.mqtt #box_port{
+    width: 150px;
+    height: 20px;
+}
+
+/*--MODBUS CONNECTION-- */
+.modbus_connect{
+    height: 372px;
+    width: 1913px;
+    margin-top: 3px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* background-color: aqua; */
+}
+
+/* ---TITLE--- */
+.modbus_connect .title{
+    height: 80px;
+    width: 1895px;
+}
+.modbus_connect #title_modbus_master{
+    width: 177px;
+    padding: 2px 863px 2px 863px;
+    margin: auto;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: -10px;
+    margin-top: 5px;
+    color: white;
+    background-color: #198f9b;
+}
+.modbus_connect .title #mqtt_topic{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+.modbus_connect .title #box_mqtt_topic{
+    height: 20px;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 3.3px;
+}
+
+/* ---SEQUENCE--- */
+.modbus_connect .sequence{
+    height: 286px;
+    width: 1895px;
+    /* background-color: burlywood; */
+}
+
+/* ----SEQUENCE ONE---- */
+.sequence_one{
+    height: 286px;
+    width: 214.8px;
+    float: left;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 6px;
+    /* background-color: #030880; */
+}
+#title_sequence_one{
+    margin-bottom: -10px;
+    margin-bottom: -10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.label_title{
+    /* margin-top: -10px; */
+    font-size: 17px;
+    color: black;
+}
+.sequence input{
+    width: 90px;
+    height: 20px;
+}
+#slave_one{
+    margin-right: 20px;
+}
+#add_one{
+    margin-right: 40px;
+}
+#box_add_one{
+    margin-top: 10px;
+}
+#add_two{
+    margin-right: 40px;
+}
+#box_add_two{
+    margin-top: 2px;
+}
+#add_three{
+    margin-right: 40px;
+}
+#box_add_three{
+    margin-top: 2px;
+}
+#add_fourth{
+    margin-right: 40px;
+}
+#box_add_fourth{
+    margin-top: 2px;
+}
+#data_one{
+    margin-right: 37px;
+}
+#box_data_one{
+    margin-top: 10px;
+}
+#data_two{
+    margin-right: 37px;
+}
+#box_data_two{
+    margin-top: 2px;
+}
+#data_three{
+    margin-right: 37px;
+}
+#box_data_three{
+    margin-top: 2px;
+}
+#data_fourth{
+    margin-right: 37px;
+}
+#box_data_fourth{
+    margin-top: 2px;
+}
+
+
+/* ----SEQUENCE TWO---- */
+.sequence_two{
+    height: 286px;
+    width: 214.8px;
+    float: left;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 6px;
+    /* background-color: #030880; */
+}
+#title_sequence_two{
+    margin-bottom: -10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.label_title{
+    font-size: 17px;
+    color: black;
+}
+input{
+    width: 120px;
+    height: 20px;
+}
+#slave_two{
+    margin-right: 20px;
+}
+
+/* ----SEQUENCE THREE---- */
+.sequence_three{
+    height: 286px;
+    width: 214.8px;
+    float: left;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 6px;
+    /* background-color: #030880; */
+}
+#title_sequence_three{
+    margin-bottom: -10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.label_title{
+    font-size: 17px;
+    color: black;
+}
+input{
+    width: 120px;
+    height: 20px;
+}
+#slave_three{
+    margin-right: 20px;
+}
+
+/* ----SEQUENCE FOURTH---- */
+.sequence_fourth{
+    height: 286px;
+    width: 214.8px;
+    float: left;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 6px;
+    /* background-color: #030880; */
+}
+#title_sequence_fourth{
+    margin-bottom: -10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.label_title{
+    font-size: 17px;
+    color: black;
+}
+input{
+    width: 120px;
+    height: 20px;
+}
+#slave_fourth{
+    margin-right: 20px;
+}
+
+/* ----SEQUENCE FIFTH---- */
+.sequence_fifth{
+    height: 286px;
+    width: 214.8px;
+    float: left;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 6px;
+    /* background-color: #030880; */
+}
+#title_sequence_fifth{
+    margin-bottom: -10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.label_title{
+    font-size: 17px;
+    color: black;
+}
+input{
+    width: 120px;
+    height: 20px;
+}
+#slave_fifth{
+    margin-right: 20px;
+}
+
+/* ----SEQUENCE SIX---- */
+.sequence_six{
+    height: 286px;
+    width: 214.8px;
+    float: left;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 6px;
+    /* background-color: #030880; */
+}
+#title_sequence_six{
+    margin-bottom: -10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.label_title{
+    font-size: 17px;
+    color: black;
+}
+input{
+    width: 120px;
+    height: 20px;
+}
+#slave_six{
+    margin-right: 20px;
+}
+
+/* ----SEQUENCE SEVEN---- */
+.sequence_seven{
+    height: 286px;
+    width: 214.8px;
+    float: left;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 6px;
+    /* background-color: #030880; */
+}
+#title_sequence_seven{
+    margin-bottom: -10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.label_title{
+    font-size: 17px;
+    color: black;
+}
+input{
+    width: 120px;
+    height: 20px;
+}
+#slave_seven{
+    margin-right: 20px;
+}
+
+/* ----SEQUENCE EIGHT---- */
+.sequence_eight{
+    height: 286px;
+    width: 214.8px;
+    float: left;
+    margin-right: 1px;
+    padding-left: 15px;
+    padding-right: 6px;
+    /* background-color: #030880; */
+}
+#title_sequence_eight{
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: -10px;
+}
+.label_title{
+    font-size: 17px;
+    color: black;
+}
+input{
+    width: 120px;
+    height: 20px;
+}
+#slave_eight{
+    margin-right: 20px;
+}
+
+/* ---IO--- */
+.IO{
+    display: flex;
+    position: relative;
+    height: 250px;
+    width: 1917px;
+    margin-top: 3px;
+    border-radius: 5px;
+    /* background-color: aqua; */
+}
+/* ----DIGITAL INPUT---- */
+.digital_input{
+    height: 160px;
+    width: 660.55px;
+    float: left;
+    margin-right: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* background-color: #030880; */
+}
+.digital_input .title{
+    height: 70px;
+    width: auto;
+    /* background-color: #0072bb; */
+}
+#title_digital_input{
+    width: 140px;
+    padding: 2px 255.275px 2px 255.275px;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: -10px;
+    margin-top: 5px;
+    color: white;
+    background-color: #198f9b;
+}
+.digital_input .title #di_mqtt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+.digital_input .title #box_di_mqtt{
+    height: 20px;
+    width: 224px;
+    margin-left: 10px;
+    margin-top: 3.3px;
+}
+.digital_input .input{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
+    width: auto;
+    height: 70px;
+    /* background-color: greenyellow; */
+}
+.digital_input .input input{
+    height: 20px;
+    width: 80px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.digital_input .input label{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+.input #box_DI_X0{
+    margin-top: -2px;
+}
+.input #box_DI_X1{
+    margin-top: -2px;
+}
+.input #box_DI_X2{
+    margin-top: -2px;
+}
+.input #box_DI_X3{
+    margin-top: -2px;
+}
+.input #comma{
+    margin-right: 20px;
+}
+
+
+/* ----ANALOG INPUT---- */
+.analog_input{
+    height: 160px;
+    width: 471.75px;
+    float: left;
+    margin-right: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* background-color: #030880; */
+}
+.analog_input .title{
+    height: 70px;
+    width: auto;
+    /* background-color: #0072bb; */
+}
+#title_analog_input{
+    width: 150px;
+    padding: 2px 155.875px 2px 155.875px;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: -10px;
+    margin-top: 5px;
+    color: white;
+    background-color: #198f9b;
+}
+.analog_input .title #ai_mqtt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+.analog_input .title #box_ai_mqtt{
+    height: 20px;
+    width: 224px;
+    margin-left: 10px;
+    margin-top: 3.3px;
+}
+.analog_input .input{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
+    width: auto;
+    height: 70px;
+    /* background-color: greenyellow; */
+}
+.analog_input .input input{
+    height: 20px;
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+.analog_input .input label{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+.input #box_AI_A0{
+    margin-top: -2px;
+    margin-right: 30px;
+}
+.input #box_AI_A1{
+    margin-top: -2px;
+}
+
+/* ----DIGITAL OUTPUT---- */
+.digital_output{
+    height: 160px;
+    width: 775px;
+    float: left;
+    border: 1px solid black;
+    border-radius: 5px;
+    /* background-color: #030880; */
+}
+.digital_output .title{
+    height: 70px;
+    width: auto;
+    /* background-color: #0072bb; */
+}
+#title_digital_output{
+    width: 160px;
+    padding: 2px 302.5px 2px 302.5px;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: -10px;
+    margin-top: 5px;
+    color: white;
+    background-color: #198f9b;
+}
+.digital_output .title #do_mqtt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+.digital_output .title #box_do_mqtt{
+    height: 20px;
+    width: 224px;
+    margin-left: 10px;
+    margin-top: 3.3px;
+}
+.digital_output .left{
+    height: 70px;
+    width: 251px;
+    float: left;
+    /* background-color: green; */
+}
+.digital_output .center{
+    height: 70px;
+    width: 251px;
+    float: left;
+    /* background-color: yellow; */
+}
+.digital_output .right{
+    height: 70px;
+    width: 251px;
+    float: left;
+    /* background-color: green; */
+}
+.digital_output #DO{
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 18px;
+    width: 233px;
+    height: 70px;
+    /* background-color: greenyellow; */
+}
+.digital_output input{
+    height: 20px;
+    width: 50px;
+}
+.digital_output .box{
+    margin-bottom: 10px;
+}
+.digital_output .label_y{
+    margin-right: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+}
+.digital_output .y_on{
+    font-size: 17px;
+    color: #39b54a;
+}
+.digital_output .y_off{
+    font-size: 17px;
+    color: #da1c5c;
+}
+
+
+
+/* -FOOTER- */
+.footer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    height: 60px;
+    width: 1920px;
+    margin-top: 3px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    /* background-color: aqua; */
+}
+/* --BUTTON SUBMIT-- */ 
+.button_submit {
+    display: block;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    color: #ecf0f1;
+    font-size: 17px;
+    font-weight: bold;
+    width: 250px;
+    height: 35px;
+    background-color: #39b54a;
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+    padding: 2px;
+    /* margin-left: 50px; */
+    margin-top: 7px;
+    box-shadow: 0px 6px 0px #39b54a;
+    transition: all .1s;
+}
+.button_submit:active {
+    box-shadow: 0px 2px 0px greenyellow;
+    position: relative;
+    top: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

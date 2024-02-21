@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter Configuration</title>
+    <link rel="stylesheet" href="KINTEK.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100&family=Moul&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script> 
+</head>
+<body>
+    <div class="containner">
+        <div class="header">
+            <img src="KINTEK​ LOGO.png" alt="KINTEK LOGO">
+            <h1 id="title_parameter">Parameter Configuration</h1>
+        </div>
+        <div class="body">
+            <div class="modbus_parameter">
+                <div class="device_info">
+                    <h2 id="title_device_info">Device info</h2><br>
+                    <label id="label_device_model">Device Model</label>
+                    <input type="number" id="box_device_model">
+                    <label id="label_serial_number">Serial Number</label>
+                    <input type="number" id="box_serial_number">
+                </div>
+                <div class="serial_setting">
+                    <h2 id="title_serial_setting">Serial Setting</h2><br>
+                    <form action="">
+                        <select name="baud" id="baud">
+                            <option value="300baud">300Baud</option>
+                            <option value="600baud">600Baud</option>
+                            <option value="1200baud">1200Baud</option>
+                            <option value="2400baud">2400Baud</option>
+                            <option value="4800baud">4800Baud</option>
+                            <option value="9600baud">9600Baud</option>
+                            <option value="14400baud">14400Baud</option>
+                            <option value="19200baud">19200Baud</option>
+                            <option value="34800baud">34800Baud</option>
+                            <option value="56000baud">56000Baud</option>
+                            <option value="57600baud">57600Baud</option>
+                            <option value="115200baud">115200Baud</option>
+                            <option value="128000baud">128000Baud</option>
+                            <option value="256000baud">256000Baud</option>
+                        </select>
+                    </form>
+                    <form action="">
+                        <select name="data_bits" id="data_bits">
+                            <option value="7data bits">7 data bits</option>
+                            <option value="8 data bits">8 data bits</option>
+                        </select>
+                    </form>
+                    <form action="">
+                        <select name="Parity" id="parity">
+                            <option value="none parity">None Parity</option>
+                            <option value="odd parity">Odd Parity</option>
+                            <option value="even parity">Even Parity</option>
+                        </select>
+                    </form>
+                    <form action="">
+                        <select name="Stop_bit" id="Stop_bit">
+                            <option value="1 stop bit">1 Stop Bit</option>
+                            <option value="2 stop bit">2 Stop Bit</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="mqtt">
+                <h2 id="title_mqtt">MQTT</h2><br>
+                <label id="url">URL<br><input type="text" id="box_url"></label>
+                <label id="user_name">User<br><input type="text" id="box_name"></label>
+                <label id="password">Password<br><input type="text" id="box_password"></label>
+                <label id="port">Port<br><input type="text" id="box_port"></label>
+            </div>
+            <div class="modbus_connect">
+                <div class="title">
+                    <h2 id="title_modbus_master">Modbus Master</h2><br>
+                    <label id="mqtt_topic">MQTT Topic<input type="text" id="box_mqtt_topic"></label>
+                </div>
+                <div class="sequence">
+                    <div class="sequence_one">
+                        <h2 id="title_sequence_one">Sequence 1</h2><br>
+                        <label class="label_title" id="slave_one">Slave ID</label>
+                        <input    type="number"    id="box_slave_one"><br>
+                        <label class="label_title" id="add_one">Add 1</label>
+                        <input    type="number"    id="box_add_one"><br>
+                        <label class="label_title" id="add_two">Add 2</label>
+                        <input    type="number"    id="box_add_two"><br>
+                        <label class="label_title" id="add_three">Add 3</label>
+                        <input    type="number"    id="box_add_three"><br>
+                        <label class="label_title" id="add_fourth">Add 4</label>
+                        <input    type="number"    id="box_add_fourth"><br>
+                        <label class="label_title" id="data_one">data 1</label>
+                        <input    type="number"    id="box_data_one"><br>
+                        <label class="label_title" id="data_two">data 2</label>
+                        <input    type="number"    id="box_data_two"><br>
+                        <label class="label_title" id="data_three">data 3</label>
+                        <input    type="number"    id="box_data_three"><br>
+                        <label class="label_title" id="data_fourth">data 4</label>
+                        <input    type="number"    id="box_data_fourth"><br>
+                    </div>
+
+                    <div class="sequence_two">
+                        <h2 id="title_sequence_two">Sequence 2</h2><br>
+                        <label class="label_title" id="slave_two">Slave ID</label>
+                        <input    type="number"    id="box_slave_two"><br>
+                        <label class="label_title" id="add_one">Add 1</label>
+                        <input    type="number"    id="box_add_one"><br>
+                        <label class="label_title" id="add_two">Add 2</label>
+                        <input    type="number"    id="box_add_two"><br>
+                        <label class="label_title" id="add_three">Add 3</label>
+                        <input    type="number"    id="box_add_three"><br>
+                        <label class="label_title" id="add_fourth">Add 4</label>
+                        <input    type="number"    id="box_add_fourth"><br>
+                        <label class="label_title" id="data_one">data 1</label>
+                        <input    type="number"    id="box_data_one"><br>
+                        <label class="label_title" id="data_two">data 2</label>
+                        <input    type="number"    id="box_data_two"><br>
+                        <label class="label_title" id="data_three">data 3</label>
+                        <input    type="number"    id="box_data_three"><br>
+                        <label class="label_title" id="data_fourth">data 4</label>
+                        <input    type="number"    id="box_data_fourth"><br>
+                    </div>
+
+                    <div class="sequence_three">
+                        <h2 id="title_sequence_three">Sequence 3</h2><br>
+                        <label class="label_title" id="slave_three">Slave ID</label>
+                        <input    type="number"    id="box_slave_three"><br>
+                        <label class="label_title" id="add_one">Add 1</label>
+                        <input    type="number"    id="box_add_one"><br>
+                        <label class="label_title" id="add_two">Add 2</label>
+                        <input    type="number"    id="box_add_two"><br>
+                        <label class="label_title" id="add_three">Add 3</label>
+                        <input    type="number"    id="box_add_three"><br>
+                        <label class="label_title" id="add_fourth">Add 4</label>
+                        <input    type="number"    id="box_add_fourth"><br>
+                        <label class="label_title" id="data_one">data 1</label>
+                        <input    type="number"    id="box_data_one"><br>
+                        <label class="label_title" id="data_two">data 2</label>
+                        <input    type="number"    id="box_data_two"><br>
+                        <label class="label_title" id="data_three">data 3</label>
+                        <input    type="number"    id="box_data_three"><br>
+                        <label class="label_title" id="data_fourth">data 4</label>
+                        <input    type="number"    id="box_data_fourth"><br>
+                    </div>
+
+                    <div class="sequence_fourth">
+                        <h2 id="title_sequence_fourth">Sequence 4</h2><br>
+                        <label class="label_title" id="slave_fourth">Slave ID</label>
+                        <input    type="number"    id="box_slave_fourth"><br>
+                        <label class="label_title" id="add_one">Add 1</label>
+                        <input    type="number"    id="box_add_one"><br>
+                        <label class="label_title" id="add_two">Add 2</label>
+                        <input    type="number"    id="box_add_two"><br>
+                        <label class="label_title" id="add_three">Add 3</label>
+                        <input    type="number"    id="box_add_three"><br>
+                        <label class="label_title" id="add_fourth">Add 4</label>
+                        <input    type="number"    id="box_add_fourth"><br>
+                        <label class="label_title" id="data_one">data 1</label>
+                        <input    type="number"    id="box_data_one"><br>
+                        <label class="label_title" id="data_two">data 2</label>
+                        <input    type="number"    id="box_data_two"><br>
+                        <label class="label_title" id="data_three">data 3</label>
+                        <input    type="number"    id="box_data_three"><br>
+                        <label class="label_title" id="data_fourth">data 4</label>
+                        <input    type="number"    id="box_data_fourth"><br>
+                    </div>
+
+                    <div class="sequence_fifth">
+                        <h2 id="title_sequence_fifth">Sequence 5</h2><br>
+                        <label class="label_title" id="slave_fifth">Slave ID</label>
+                        <input    type="number"    id="box_slave_fifth"><br>
+                        <label class="label_title" id="add_one">Add 1</label>
+                        <input    type="number"    id="box_add_one"><br>
+                        <label class="label_title" id="add_two">Add 2</label>
+                        <input    type="number"    id="box_add_two"><br>
+                        <label class="label_title" id="add_three">Add 3</label>
+                        <input    type="number"    id="box_add_three"><br>
+                        <label class="label_title" id="add_fourth">Add 4</label>
+                        <input    type="number"    id="box_add_fourth"><br>
+                        <label class="label_title" id="data_one">data 1</label>
+                        <input    type="number"    id="box_data_one"><br>
+                        <label class="label_title" id="data_two">data 2</label>
+                        <input    type="number"    id="box_data_two"><br>
+                        <label class="label_title" id="data_three">data 3</label>
+                        <input    type="number"    id="box_data_three"><br>
+                        <label class="label_title" id="data_fourth">data 4</label>
+                        <input    type="number"    id="box_data_fourth"><br>
+                    </div>
+
+                    <div class="sequence_six">
+                        <h2 id="title_sequence_six">Sequence 6</h2><br>
+                        <label class="label_title" id="slave_six">Slave ID</label>
+                        <input    type="number"    id="box_slave_six"><br>
+                        <label class="label_title" id="add_one">Add 1</label>
+                        <input    type="number"    id="box_add_one"><br>
+                        <label class="label_title" id="add_two">Add 2</label>
+                        <input    type="number"    id="box_add_two"><br>
+                        <label class="label_title" id="add_three">Add 3</label>
+                        <input    type="number"    id="box_add_three"><br>
+                        <label class="label_title" id="add_fourth">Add 4</label>
+                        <input    type="number"    id="box_add_fourth"><br>
+                        <label class="label_title" id="data_one">data 1</label>
+                        <input    type="number"    id="box_data_one"><br>
+                        <label class="label_title" id="data_two">data 2</label>
+                        <input    type="number"    id="box_data_two"><br>
+                        <label class="label_title" id="data_three">data 3</label>
+                        <input    type="number"    id="box_data_three"><br>
+                        <label class="label_title" id="data_fourth">data 4</label>
+                        <input    type="number"    id="box_data_fourth"><br>
+                    </div>
+
+                    <div class="sequence_seven">
+                        <h2 id="title_sequence_seven">Sequence 7</h2><br>
+                        <label class="label_title" id="slave_seven">Slave ID</label>
+                        <input    type="number"    id="box_slave_seven"><br>
+                        <label class="label_title" id="add_one">Add 1</label>
+                        <input    type="number"    id="box_add_one"><br>
+                        <label class="label_title" id="add_two">Add 2</label>
+                        <input    type="number"    id="box_add_two"><br>
+                        <label class="label_title" id="add_three">Add 3</label>
+                        <input    type="number"    id="box_add_three"><br>
+                        <label class="label_title" id="add_fourth">Add 4</label>
+                        <input    type="number"    id="box_add_fourth"><br>
+                        <label class="label_title" id="data_one">data 1</label>
+                        <input    type="number"    id="box_data_one"><br>
+                        <label class="label_title" id="data_two">data 2</label>
+                        <input    type="number"    id="box_data_two"><br>
+                        <label class="label_title" id="data_three">data 3</label>
+                        <input    type="number"    id="box_data_three"><br>
+                        <label class="label_title" id="data_fourth">data 4</label>
+                        <input    type="number"    id="box_data_fourth"><br>
+                    </div>
+
+                    <div class="sequence_eight">
+                        <h2 id="title_sequence_eight">Sequence 8</h2><br>
+                        <label class="label_title" id="slave_eight">Slave ID</label>
+                        <input    type="number"    id="box_slave_eight"><br>
+                        <label class="label_title" id="add_one">Add 1</label>
+                        <input    type="number"    id="box_add_one"><br>
+                        <label class="label_title" id="add_two">Add 2</label>
+                        <input    type="number"    id="box_add_two"><br>
+                        <label class="label_title" id="add_three">Add 3</label>
+                        <input    type="number"    id="box_add_three"><br>
+                        <label class="label_title" id="add_fourth">Add 4</label>
+                        <input    type="number"    id="box_add_fourth"><br>
+                        <label class="label_title" id="data_one">data 1</label>
+                        <input    type="number"    id="box_data_one"><br>
+                        <label class="label_title" id="data_two">data 2</label>
+                        <input    type="number"    id="box_data_two"><br>
+                        <label class="label_title" id="data_three">data 3</label>
+                        <input    type="number"    id="box_data_three"><br>
+                        <label class="label_title" id="data_fourth">data 4</label>
+                        <input    type="number"    id="box_data_fourth"><br>
+                    </div> 
+                </div>
+            </div>
+            
+            <div class="IO">
+                <div class="digital_input">
+                    <div class="title">
+                        <h2 id="title_digital_input">Digital Input</h2><br>
+                        <label class="di_mqtt"  id="di_mqtt">MQTT Topic<input type="text" id="box_di_mqtt"></label>
+                    </div>
+                    <div class="input">
+                        <label class="label_xo" id="label_xo">X0 = </label>
+                        <input    type="number" id="box_DI_X0">
+                        <label                  id="comma">;</label>
+                        <label class="label_x1" id="label_x1">X1 = </label>
+                        <input    type="number" id="box_DI_X1">
+                        <label                  id="comma">;</label>
+                        <label class="label_x2" id="label_x2">X2 = </label>
+                        <input    type="number" id="box_DI_X2">
+                        <label                  id="comma">;</label>
+                        <label class="label_x3" id="label_x3">X3 = </label>
+                        <input    type="number" id="box_DI_X3">
+                        <label                  id="comma_">;</label>
+                    </div>
+                </div>
+                <div class="analog_input">
+                    <div class="title">
+                        <h2 id="title_analog_input">Analog Input</h2><br>
+                        <label class="ai_mqtt"  id="ai_mqtt">MQTT Topic<input type="text" id="box_ai_mqtt"></label>
+                    </div>
+                    <div class="input">
+                        <label class="label_a0" id="label_a0">A0 = </label>
+                        <input    type="number" id="box_AI_A0">
+                        <label class="label_a1" id="label_a1">A1 = </label>
+                        <input    type="number" id="box_AI_A1">
+                    </div>
+                </div>
+                <div class="digital_output">
+                    <div class="title">
+                        <h2 id="title_digital_output">Digital Output</h2><br>
+                        <label class="do_mqtt"  id="do_mqtt">MQTT Topic<input type="text" id="box_do_mqtt"></label>
+                    </div>
+                    <div class="left" id="DO">
+                        <label class="label_y" id="label_y0">Y0 : </label>
+                        <label class="y_on"    id="y0_on"> ON </label>
+                        <input class="box"    type="number" id="box_DO_Y0_on">
+                        <label class="y_off"   id="y0_off"> OFF </label>
+                        <input class="box"    type="number" id="box_DO_Y0_off"><br>
+                        <label class="label_y" id="label_y3">Y3 : </label>
+                        <label class="y_on"    id="y3_on"> ON </label>
+                        <input class="box"    type="number" id="box_DO_Y3_on">
+                        <label class="y_off"   id="y3_off"> OFF </label>
+                        <input class="box"    type="number" id="box_DO_Y3_off">
+                    </div>
+                    <div class="center" id="DO">
+                        <label class="label_y" id="label_y1">Y1 : </label>
+                        <label class="y_on"    id="y1_on"> ON </label>
+                        <input class="box"    type="number" id="box_DO_Y1_on">
+                        <label class="y_off"   id="y1_off"> OFF </label>
+                        <input class="box"    type="number" id="box_DO_Y1_off"><br>
+                        <label class="label_y" id="label_y4">Y4 : </label>
+                        <label class="y_on"    id="y4_on"> ON </label>
+                        <input class="box"    type="number" id="box_DO_Y4_on">
+                        <label class="y_off"   id="y4_off"> OFF </label>
+                        <input class="box"    type="number" id="box_DO_Y4_off">
+                    </div>
+                    <div class="right" id="DO">
+                            <label class="label_y" id="label_y2">Y2 : </label>
+                            <label class="y_on"    id="y2_on"> ON </label>
+                            <input class="box"    type="number" id="box_DO_Y2_on">
+                            <label class="y_off"   id="y2_off"> OFF </label>
+                            <input class="box"    type="number" id="box_DO_Y2_off"><br>
+                            <label class="label_y" id="label_y5">Y5 : </label>
+                            <label class="y_on"    id="y5_on"> ON </label>
+                            <input class="box"    type="number" id="box_DO_Y5_on">
+                            <label class="y_off"   id="y5_off"> OFF </label>
+                            <input class="box"    type="number" id="box_DO_Y5_off">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="button_submit" id="button_submit" disabled>Submit</button>
+        </div>
+    </div>
+    
+</body>
+</html>
